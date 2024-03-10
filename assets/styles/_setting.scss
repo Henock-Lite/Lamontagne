@@ -1,0 +1,51 @@
+$color1: rgb(255, 252, 252);
+$color2: rgb(61, 60, 60);
+$color3: rgb(207, 206, 206);
+
+@mixin childcenter {
+  display: flex;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/static/Inter-ExtraLight.ttf);
+}
+@mixin font1 {
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+}
+@mixin font2 {
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/static/Inter-ExtraLight.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background: url(/assets/images/bg.jpg) fixed center/cover;
+}
+h1 {
+  @include font1;
+  text-transform: uppercase;
+  font-weight: 850;
+  color: $color1;
+  letter-spacing: 5px;
+  width: 43%;
+  font-size: 2.8em;
+  
+}
+p{
+    @include font1
+}

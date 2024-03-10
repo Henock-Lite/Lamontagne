@@ -1,0 +1,18 @@
+header{
+    height: 100vh;
+    .header-title{
+        @include childcenter;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        padding: 5px;
+        .par-icone p{
+            color: $color1;
+            font-style: italic;
+            margin-top: 20px;
+        }
+    }
+
+}
+   
+    

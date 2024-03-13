@@ -4,13 +4,86 @@ header{
         @include childcenter;
         flex-direction: column;
         align-items: center;
-        height: 80%;
-        padding: 5px;
-        .par-icone p{
-            color: $color1;
-            font-style: italic;
-            margin-top: 20px;
+        height: 90%;
+
+        .part-icone{
+            p{
+                font-style: italic;
+                color: rgb(241, 240, 240);
+                margin:5px auto;
+            }
+            .icone{
+                width: 45px;
+                height: 45px;
+                border-radius: 150px;
+                margin: 20px auto;
+                border: solid 1px white;
+                position: relative;
+                cursor: pointer;
+                i{
+                    color: white;
+                    position:absolute;
+                    top: 50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
         }
+    }
+
+    nav{
+        height: 80px;
+        width: clamp(600px,80%,1100px);
+        background:white;
+        margin: 0 auto;
+        position: absolute;
+        transform: translate(-50%);
+        left: 50%;
+        bottom: 0;
+        
+    
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+     
+        ul{
+            width: 45%;
+            display: flex;
+            li{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                text-transform:uppercase;
+                font-weight:bold;
+                font-size: .8em;
+                cursor: pointer;
+                @include font1;
+                a{
+                    text-decoration: none;
+                    list-style: none;
+                    color:$color2;
+                }
+
+
+            }
+        }
+        
+            
+        
+            
+           
+
+
+        }
+
+        .reseau{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
     }
 
 }

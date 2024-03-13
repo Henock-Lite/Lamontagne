@@ -9,20 +9,20 @@ $color3: rgb(207, 206, 206);
 
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/static/Inter-Bold.ttf);
+  src: url(/assets/fonts/Inter-Bold.ttf);
 }
 
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/static/Inter-ExtraLight.ttf);
+  src: url(/assets/fonts/Inter-ExtraLight.ttf);
 }
 @mixin font1 {
   font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/static/Inter-Bold.ttf);
+  src: url(/assets/fonts/Inter-Bold.ttf);
 }
 @mixin font2 {
   font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/static/Inter-ExtraLight.ttf);
+  src: url(/assets/fonts/Inter-ExtraLight.ttf);
 }
 * {
   margin: 0;

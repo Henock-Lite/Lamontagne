@@ -37,6 +37,10 @@ p {
   src: url(/assets/fonts/Inter-Bold.ttf);
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   height: 100vh;
 }
@@ -81,13 +85,13 @@ header .header-title .part-icone .icone i {
 }
 header nav {
   height: 80px;
-  width: clamp(600px, 80%, 1100px);
-  background: white;
-  margin: 0 auto;
+  width: clamp(715px, 80%, 1200px);
+  background: rgba(209, 207, 207, 0.728);
+  color: black;
   position: absolute;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   left: 50%;
   bottom: 0;
 }
@@ -106,6 +110,13 @@ header nav .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
+}
+header nav .nav ul:hover li:not(:hover) {
+  background: none;
+}
+header nav .nav ul:hover li:not(:hover) a {
+  color: rgb(255, 252, 252);
 }
 header nav .nav ul li {
   display: -webkit-box;
@@ -114,18 +125,34 @@ header nav .nav ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.8em;
-  cursor: pointer;
   font-family: "Inter", sans-serif;
   src: url(/assets/fonts/Inter-Bold.ttf);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+header nav .nav ul li:hover {
+  background: rgb(255, 252, 252);
+}
+header nav .nav ul li:hover a {
+  color: black;
+}
+header nav .nav ul li:first-child {
+  background: rgb(255, 252, 252);
+}
+header nav .nav ul li:first-child a {
+  color: black;
 }
 header nav .nav ul li a {
-  text-decoration: none;
-  list-style: none;
-  color: rgb(61, 60, 60);
+  color: rgb(255, 252, 252);
+  width: 100%;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 header nav .reseau {
   display: -webkit-box;
@@ -135,6 +162,19 @@ header nav .reseau {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  width: 15%;
+}
+header nav .reseau i {
+  width: 25%;
+  cursor: pointer;
+  color: rgb(255, 252, 252);
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+header nav .reseau i:hover {
+  -webkit-transform: scale(1.6);
+      -ms-transform: scale(1.6);
+          transform: scale(1.6);
 }
 
 main img {

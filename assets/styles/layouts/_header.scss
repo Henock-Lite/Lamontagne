@@ -33,7 +33,7 @@ header{
     }
     nav{
         height: 80px;
-        width: clamp(715px,80%,1200px);
+        width: clamp(715px,80%,1100px);
         background:rgba(209, 207, 207, 0.728);
         color:black;
         position: absolute;
@@ -65,13 +65,13 @@ header{
                 height: 100%;
                 transition:  ease .3s;
                 &:hover{
-                    background: $color1;
+                    background:rgb(238, 236, 236);
                 }
                 &:hover a{
                     color: black;
                 }
                 &:first-child{
-                    background: $color1;
+                    background:rgb(238, 236, 236);
                 }
                 &:first-child a{
                     color: black;

@@ -36,6 +36,16 @@ a {
   text-decoration: none;
 }
 
+button {
+  all: unset;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/Inter-Bold.ttf);
+  border: solid 2px black;
+  padding: 6px;
+  cursor: pointer;
+}
+
 header {
   height: 100vh;
 }
@@ -176,6 +186,11 @@ main {
   background: rgb(255, 252, 252);
   margin: 0 auto;
   width: clamp(715px, 80vw, 1100px);
+  height: 100%;
+}
+main .first-sect {
+  width: 100%;
+  height: 100%;
 }
 main .first-sect .date p {
   padding: 50px 0;
@@ -217,6 +232,71 @@ main .first-sect .massive-p {
   width: 50%;
   margin: 20px auto;
 }
-main img {
-  width: 50%;
+main .first-sect .massive-picture img {
+  width: 70%;
+  height: auto;
+}
+main .first-sect .massive-picture .massive-button {
+  padding: 60px;
+}
+main .first-sect .massive-picture .massive-button button {
+  font-weight: 700;
+}
+main .seconde-sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #cac8c8;
+  width: 100%;
+  height: 100%;
+}
+main .seconde-sect img {
+  width: 80%;
+  height: auto;
+}
+main .seconde-sect .left-part, main .seconde-sect .right-part {
+  border-right: 1px solid #cac8c8;
+  padding-bottom: 45px;
+}
+main .seconde-sect .left-part .date, main .seconde-sect .right-part .date {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+main .seconde-sect .left-part h3, main .seconde-sect .right-part h3 {
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/Inter-Bold.ttf);
+  margin: 20px auto;
+  width: 45%;
+}
+main .seconde-sect .left-part .Magna-p, main .seconde-sect .right-part .Magna-p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 26px;
+}
+main .seconde-sect .left-part .Magna-button, main .seconde-sect .right-part .Magna-button {
+  padding: 10px;
+}
+
+footer {
+  width: clamp(715px, 80vw, 1100px);
+  height: 50vh;
+  background: rgb(233, 233, 233);
+  margin: 20px auto;
+}
+footer form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+footer form .form-part {
+  display: grid;
+  grid-template-rows: 7% 7% 7% 7% 7% 20% 4%;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */

@@ -52,9 +52,9 @@ main{
             }
             .massive-button{
                 padding:60px;
-                button{
-                    font-weight: 700;
-                }
+                // button{
+                    
+                // }
             } 
         }
     }
@@ -69,7 +69,7 @@ main{
         }
         .left-part,.right-part{
             border-right: 1px solid #cac8c8;
-            padding-bottom: 45px;
+            padding: 60px;
             .date{
                 text-transform: uppercase;
                 font-size: .9rem;
@@ -88,7 +88,7 @@ main{
                 line-height: 26px;
             }
             .Magna-button{
-                padding: 10px
+                margin: 25px 0;
             }
 
         }

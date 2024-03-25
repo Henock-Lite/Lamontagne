@@ -42,7 +42,8 @@ button {
   font-family: "Inter", sans-serif;
   src: url(/assets/fonts/Inter-Bold.ttf);
   border: solid 2px black;
-  padding: 6px;
+  padding: 10px;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -239,9 +240,6 @@ main .first-sect .massive-picture img {
 main .first-sect .massive-picture .massive-button {
   padding: 60px;
 }
-main .first-sect .massive-picture .massive-button button {
-  font-weight: 700;
-}
 main .seconde-sect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,7 +254,7 @@ main .seconde-sect img {
 }
 main .seconde-sect .left-part, main .seconde-sect .right-part {
   border-right: 1px solid #cac8c8;
-  padding-bottom: 45px;
+  padding: 60px;
 }
 main .seconde-sect .left-part .date, main .seconde-sect .right-part .date {
   text-transform: uppercase;
@@ -277,26 +275,137 @@ main .seconde-sect .left-part .Magna-p, main .seconde-sect .right-part .Magna-p 
   line-height: 26px;
 }
 main .seconde-sect .left-part .Magna-button, main .seconde-sect .right-part .Magna-button {
-  padding: 10px;
+  margin: 25px 0;
 }
 
 footer {
   width: clamp(715px, 80vw, 1100px);
-  height: 50vh;
   background: rgb(233, 233, 233);
   margin: 20px auto;
+  height: 100%;
 }
 footer form {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 50%);
   width: 100%;
   height: 100%;
 }
-footer form .form-part {
+footer form .form-right {
   display: grid;
-  grid-template-rows: 7% 7% 7% 7% 7% 20% 4%;
+  grid-template-rows: 8% 7% 8% 7% 8% 44% 7%;
   width: 80%;
   margin: 0 auto;
+  padding-top: 30px;
   height: 100%;
   text-align: left;
+}
+footer form .form-right label {
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  font-weight: 580;
+  color: rgb(53, 51, 51);
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/Inter-Bold.ttf);
+}
+footer form .form-right input {
+  height: 100%;
+  border: solid 2px rgb(183, 181, 181);
+  outline: none;
+  border-radius: 5px;
+  background: transparent;
+}
+footer form .form-right textarea {
+  border: solid 2px rgb(183, 181, 181);
+  outline: none;
+  resize: none;
+  background: transparent;
+  margin: 20px 0;
+}
+footer form .form-right input[type=button] {
+  width: 50%;
+  padding: 5px;
+  cursor: pointer;
+  border: solid 2px black;
+  border-radius: initial;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 580;
+  letter-spacing: 2px;
+}
+footer .form-left {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  color: rgb(53, 51, 51);
+}
+footer .form-left .rows {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid rgb(183, 181, 181);
+}
+footer .form-left .rows .column {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(183, 181, 181);
+}
+footer .form-left .rows .column .column-left {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+footer .form-left .rows .column .column-left p {
+  width: 40%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 580;
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/Inter-Bold.ttf);
+  text-transform: uppercase;
+}
+footer .form-left .rows .column .column-right {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  text-align: left;
+}
+footer .form-left .rows .column .column-right p {
+  font-family: "Inter", sans-serif;
+  src: url(/assets/fonts/Inter-Bold.ttf);
+  color: rgb(121, 121, 121);
+}
+footer .form-left .rows .column .column-right .reseau-last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+footer .form-left .rows .column .column-right .reseau-last span {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 150px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+footer .form-left .rows .column .column-right .reseau-last span:hover i {
+  color: rgb(122, 104, 237);
+}
+footer .form-left .rows .column .column-right .reseau-last span i {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }/*# sourceMappingURL=index.css.map */

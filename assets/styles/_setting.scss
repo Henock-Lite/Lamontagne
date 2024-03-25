@@ -53,6 +53,7 @@ button{
   text-transform: uppercase;
   @include font1;
   border: solid 2px black;
-  padding: 6px;
+  padding: 10px;
+  font-weight: 600;
   cursor: pointer;
 }

@@ -1,20 +1,121 @@
 footer{
     width: clamp(715px,80vw,1100px);
-    height: 50vh;
     background: $color3;
     margin: 20px auto;
+    height: 100%;
     form{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2,50%);
         width: 100%;
         height: 100%;
-        .form-part{
+        .form-right{
             display: grid;
-            grid-template-rows: 7% 7% 7% 7% 7% 20% 4%;
+            grid-template-rows:8% 7% 8% 7% 8% 44% 7%;
             width: 80%;
-            margin: 0 auto;
+            margin:  0 auto;
+            padding-top: 30px;
             height: 100%;
             text-align: left;
+            label{
+                align-self: center;
+                text-transform: uppercase;
+                font-weight: 580;
+                color: rgb(53, 51, 51);
+                font-size: .9rem;
+                @include font1;
+            }
+            input{
+                height:100%;
+                border: solid 2px  rgb(183, 181, 181);
+                outline: none;
+                border-radius: 5px;
+                background: transparent;
+            }
+            textarea{
+                border: solid 2px rgb(183, 181, 181);
+                outline: none;
+                resize: none;
+                background:transparent;
+                margin: 20px 0;
+            }
+            input[type="button"]{
+                width: 50%;
+                padding: 5px;
+                cursor: pointer;
+                border: solid 2px black;
+                border-radius: initial;
+                text-transform: uppercase;
+                font-size: .8rem;
+                font-weight: 580;
+                letter-spacing: 2px;
+            }
         }
     }
+    
+    .form-left{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        color: rgb(53, 51, 51);
+        .rows{
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            width: 100%;
+            height: 100%;
+            border-left: 1px solid rgb(183, 181, 181);
+            .column{
+                display: grid;
+                grid-template-columns:40% 60%;
+                width:100%;
+                margin: 0 auto;
+                border-bottom: 1px solid rgb(183, 181, 181);
+                .column-left{
+                    align-self: center;
+                    p{
+                        width: 40%;
+                        text-align: left;
+                        margin: 0 auto;
+                        font-size: .9rem;
+                        font-weight: 580;
+                        @include font1;
+                        text-transform: uppercase;
+                    }
+                }
+                .column-right{
+                    align-self: center; 
+                    width: 100%;
+                    text-align: left;
+                    p{
+                        @include font1;
+                        color: rgb(121, 121, 121);
+                    } 
+                    .reseau-last{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 80%;
+                       span{
+                        width:35px;
+                        height: 35px;
+                        border: 1px solid black ;
+                        border-radius: 150px;
+                        transition: ease .5s;
+                        &:hover i{
+                            color: rgb(122, 104, 237);
+                        }
+                        i{
+                            align-content: center;
+                            height: 100%;
+                            width: 100%;
+                            text-align: center;
+                            cursor: pointer; 
+                            transition: ease .5s;
+                        }
+                       }
+                    }  
+                }   
+            }
+           
+        }
+    }
+    
 }

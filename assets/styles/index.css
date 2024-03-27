@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: "Inter-bold";
+  src: url(../assets/fonts/Inter-Bold.ttf);
 }
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-ExtraLight.ttf);
+  src: url(../assets/fonts/Inter-ExtraLight.ttf);
 }
 * {
   margin: 0;
@@ -18,18 +18,34 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  background: url(/assets/images/bg.jpg) fixed center/cover;
+  background: url(../images/bg.jpg) fixed center/cover;
+}
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000;
+  top: 0;
+  left: 0;
+  -webkit-animation: Animbody forwards ease 1.5s;
+          animation: Animbody forwards ease 1.5s;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+@-webkit-keyframes Animbody {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes Animbody {
+  to {
+    opacity: 0;
+  }
 }
 
-h1 {
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
-  text-transform: uppercase;
-  font-weight: 850;
-  color: rgb(255, 252, 252);
-  letter-spacing: 5px;
-  width: 43%;
-  font-size: 2.8em;
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -39,12 +55,12 @@ a {
 button {
   all: unset;
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
   border: solid 2px black;
   padding: 10px;
   font-weight: 600;
   cursor: pointer;
+  letter-spacing: 4px;
 }
 
 header {
@@ -64,12 +80,59 @@ header .header-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90%;
+  height: 100vh;
+  -webkit-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-animation: Animheader 1.5s ease forwards;
+          animation: Animheader 1.5s ease forwards;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  opacity: 0;
+}
+@-webkit-keyframes Animheader {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes Animheader {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+header .header-title h1 {
+  font-family: Inter-bold, sans-serif;
+  text-transform: uppercase;
+  font-weight: 850;
+  color: rgb(255, 252, 252);
+  letter-spacing: 5px;
+  width: 50%;
+  font-size: 3.5vw;
 }
 header .header-title .part-icone p {
   font-style: italic;
   color: rgb(241, 240, 240);
   margin: 5px auto;
+}
+@media screen and (max-width: 769px) {
+  header .header-title .part-icone p {
+    width: 50%;
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 533px) {
+  header .header-title .part-icone p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 330px) {
+  header .header-title .part-icone p {
+    font-size: 0.7em;
+  }
 }
 header .header-title .part-icone .icone {
   width: 45px;
@@ -100,6 +163,11 @@ header nav {
           transform: translateX(-50%);
   left: 50%;
   bottom: 0;
+}
+@media screen and (max-width: 769px) {
+  header nav {
+    width: clamp(300px, 80%, 1100px);
+  }
 }
 header nav .nav {
   display: -webkit-box;
@@ -132,8 +200,7 @@ header nav .nav ul li {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -177,6 +244,11 @@ header nav .reseau i {
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
+@media screen and (max-width: 769px) {
+  header nav .reseau i {
+    display: none;
+  }
+}
 header nav .reseau i:hover {
   -webkit-transform: scale(1.6);
       -ms-transform: scale(1.6);
@@ -188,6 +260,11 @@ main {
   margin: 0 auto;
   width: clamp(715px, 80vw, 1100px);
   height: 100%;
+}
+@media screen and (max-width: 769px) {
+  main {
+    width: clamp(300px, 80%, 1100px);
+  }
 }
 main .first-sect {
   width: 100%;
@@ -208,24 +285,47 @@ main .first-sect .date p::before, main .first-sect .date p::after {
   left: 50%;
   top: 50%;
 }
+@media screen and (max-width: 555px) {
+  main .first-sect .date p::before, main .first-sect .date p::after {
+    width: 20%;
+  }
+}
 main .first-sect .date p::before {
   -webkit-transform: translate(-50%, -50%) translateX(-85%);
       -ms-transform: translate(-50%, -50%) translateX(-85%);
           transform: translate(-50%, -50%) translateX(-85%);
+}
+@media screen and (max-width: 555px) {
+  main .first-sect .date p::before {
+    -webkit-transform: translate(-50%, -50%) translateX(-150%);
+        -ms-transform: translate(-50%, -50%) translateX(-150%);
+            transform: translate(-50%, -50%) translateX(-150%);
+  }
 }
 main .first-sect .date p::after {
   -webkit-transform: translate(-50%, -50%) translateX(85%);
       -ms-transform: translate(-50%, -50%) translateX(85%);
           transform: translate(-50%, -50%) translateX(85%);
 }
+@media screen and (max-width: 555px) {
+  main .first-sect .date p::after {
+    -webkit-transform: translate(-50%, -50%) translateX(150%);
+        -ms-transform: translate(-50%, -50%) translateX(150%);
+            transform: translate(-50%, -50%) translateX(150%);
+  }
+}
 main .first-sect h2 {
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
   font-weight: 800;
   font-size: 1.8rem;
   width: 40%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1018px) {
+  main .first-sect h2 {
+    font-size: 2.3vw;
+  }
 }
 main .first-sect .massive-p {
   font-style: italic;
@@ -248,33 +348,42 @@ main .seconde-sect {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 729px) {
+  main .seconde-sect {
+    display: block;
+  }
+}
 main .seconde-sect img {
   width: 80%;
   height: auto;
 }
-main .seconde-sect .left-part, main .seconde-sect .right-part {
+main .seconde-sect .left-part,
+main .seconde-sect .right-part {
   border-right: 1px solid #cac8c8;
   padding: 60px;
 }
-main .seconde-sect .left-part .date, main .seconde-sect .right-part .date {
+main .seconde-sect .left-part .date,
+main .seconde-sect .right-part .date {
   text-transform: uppercase;
   font-size: 0.9rem;
   margin: 15px 0;
 }
-main .seconde-sect .left-part h3, main .seconde-sect .right-part h3 {
+main .seconde-sect .left-part h3,
+main .seconde-sect .right-part h3 {
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
   margin: 20px auto;
   width: 45%;
 }
-main .seconde-sect .left-part .Magna-p, main .seconde-sect .right-part .Magna-p {
+main .seconde-sect .left-part .Magna-p,
+main .seconde-sect .right-part .Magna-p {
   width: 80%;
   margin: 0 auto;
   text-align: left;
   line-height: 26px;
 }
-main .seconde-sect .left-part .Magna-button, main .seconde-sect .right-part .Magna-button {
+main .seconde-sect .left-part .Magna-button,
+main .seconde-sect .right-part .Magna-button {
   margin: 25px 0;
 }
 
@@ -284,11 +393,21 @@ footer {
   margin: 20px auto;
   height: 100%;
 }
+@media screen and (max-width: 769px) {
+  footer {
+    width: clamp(300px, 80%, 1100px);
+  }
+}
 footer form {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 729px) {
+  footer form {
+    grid-template-columns: 1fr;
+  }
 }
 footer form .form-right {
   display: grid;
@@ -306,8 +425,7 @@ footer form .form-right label {
   font-weight: 580;
   color: rgb(53, 51, 51);
   font-size: 0.9rem;
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
 }
 footer form .form-right input {
   height: 100%;
@@ -333,6 +451,18 @@ footer form .form-right input[type=button] {
   font-size: 0.8rem;
   font-weight: 580;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 757px) {
+  footer form .form-right input[type=button] {
+    font-size: 0.5em;
+    letter-spacing: normal;
+    font-size: small;
+  }
+}
+@media screen and (max-width: 351px) {
+  footer form .form-right input[type=button] {
+    width: 60%;
+  }
 }
 footer .form-left {
   height: 100%;
@@ -364,9 +494,13 @@ footer .form-left .rows .column .column-left p {
   margin: 0 auto;
   font-size: 0.9rem;
   font-weight: 580;
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
   text-transform: uppercase;
+}
+@media screen and (max-width: 351px) {
+  footer .form-left .rows .column .column-left p {
+    font-size: 0.7rem;
+  }
 }
 footer .form-left .rows .column .column-right {
   -ms-flex-item-align: center;
@@ -375,9 +509,13 @@ footer .form-left .rows .column .column-right {
   text-align: left;
 }
 footer .form-left .rows .column .column-right p {
-  font-family: "Inter", sans-serif;
-  src: url(/assets/fonts/Inter-Bold.ttf);
+  font-family: Inter-bold, sans-serif;
   color: rgb(121, 121, 121);
+}
+@media screen and (max-width: 351px) {
+  footer .form-left .rows .column .column-right p {
+    font-size: 0.7rem;
+  }
 }
 footer .form-left .rows .column .column-right .reseau-last {
   display: -webkit-box;
@@ -391,7 +529,7 @@ footer .form-left .rows .column .column-right .reseau-last {
 footer .form-left .rows .column .column-right .reseau-last span {
   width: 35px;
   height: 35px;
-  border: 1px solid black;
+  border: 1px solid rgb(170, 168, 168);
   border-radius: 150px;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;

@@ -1,96 +1,115 @@
-main{
-    background: $color1;
-    margin: 0 auto;
-    width: clamp(715px,80vw,1100px);
+main {
+  @media screen and (max-width: 769px) {
+    width: clamp(300px, 80%, 1100px);
+  }
+  background: $color1;
+  margin: 0 auto;
+  width: clamp(715px, 80vw, 1100px);
+  height: 100%;
+  .first-sect {
+    width: 100%;
     height: 100%;
-    .first-sect{
-        width: 100%;
-        height: 100%;
-        .date{
-            p{
-                padding: 50px 0;
-                text-transform: uppercase;
-                font-size: .9rem;
-                position: relative;
-                &::before,&::after{
-                    content: "";
-                    position: absolute;
-                    height: 1px;
-                    background: #cac8c8;
-                    width: 30%;
-                    left: 50%;
-                    top: 50%;
-                }
-                &::before{
-                    transform: translate(-50%,-50%) translateX(-85%);
-                }
-                   
-                &::after{
-                    transform: translate(-50%,-50%) translateX(85%);
-                }
-            }
+    .date {
+      p {
+        padding: 50px 0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          background: #cac8c8;
+          width: 30%;
+          @media screen and (max-width: 555px) {
+            width: 20%;
+          }
+          left: 50%;
+          top: 50%;
+        }
+        &::before {
+          transform: translate(-50%, -50%) translateX(-85%);
+          @media screen and (max-width: 555px) {
+            transform: translate(-50%, -50%) translateX(-150%);
+          }
         }
 
-        h2{
-            text-transform: uppercase;
-            @include font1;
-            font-weight: 800;
-            font-size: 1.8rem;
-            width: 40%;
-            margin: 0 auto;
-        }
-        .massive-p{
-            font-style: italic;
-            line-height: 38px;
-            width: 50%;
-            margin: 20px auto;
-        }
-        .massive-picture{
-            img{
-                width: 70%;
-                height: auto;
+        &::after {
+          transform: translate(-50%, -50%) translateX(85%);
+          @media screen and (max-width:555px) {
+            transform: translate(-50%,-50%) translateX(150%);
             }
-            .massive-button{
-                padding:60px;
-                // button{
-                    
-                // }
-            } 
         }
+      }
     }
-    .seconde-sect{
-        display: flex;
-        border-top: 1px solid  #cac8c8;
-        width: 100%;
-        height: 100%;
-        img{
-            width: 80%;
-            height:auto;
-        }
-        .left-part,.right-part{
-            border-right: 1px solid #cac8c8;
-            padding: 60px;
-            .date{
-                text-transform: uppercase;
-                font-size: .9rem;
-                margin: 15px 0;
-            }
-            h3{
-                text-transform: uppercase;
-                @include font1;
-                margin: 20px auto;
-                width: 45%;
-            }
-            .Magna-p{
-                width: 80%;
-                margin: 0 auto;
-                text-align: left;
-                line-height: 26px;
-            }
-            .Magna-button{
-                margin: 25px 0;
-            }
 
-        }
+    h2 {
+      @media screen and (max-width: 1018px) {
+        font-size: 2.3vw;
+      }
+      text-transform: uppercase;
+      font-family: $font1;
+      font-weight: 800;
+      font-size: 1.8rem;
+      width: 40%;
+      margin: 0 auto;
     }
+    .massive-p {
+      font-style: italic;
+      line-height: 38px;
+      width: 50%;
+      margin: 20px auto;
+    }
+    .massive-picture {
+      img {
+        width: 70%;
+        height: auto;
+      }
+      .massive-button {
+        padding: 60px;
+        // button{
+
+        // }
+      }
+    }
+  }
+  .seconde-sect {
+    display: flex;
+    border-top: 1px solid #cac8c8;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 729px) {
+      display: block;
+    }
+    img {
+      width: 80%;
+      height: auto;
+    }
+    .left-part,
+    .right-part {
+      border-right: 1px solid #cac8c8;
+      padding: 60px;
+      .date {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        margin: 15px 0;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-family: $font1;
+        margin: 20px auto;
+        width: 45%;
+      }
+      .Magna-p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 26px;
+      }
+      .Magna-button {
+        margin: 25px 0;
+      }
+    }
+  }
 }

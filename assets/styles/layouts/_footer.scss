@@ -45,7 +45,7 @@ footer{
                 margin: 20px 0;
             }
             input[type="button"]{
-                @media screen and (max-width:757px) {
+                @media screen and (max-width:857px) {
                 font-size: .5em;
                 letter-spacing: normal;
                 font-size: small;
@@ -119,6 +119,10 @@ footer{
                         border: 1px solid rgb(170, 168, 168) ;
                         border-radius: 150px;
                         transition: ease .5s;
+                        @media screen and (max-width:351px) {
+                            width: 25px;
+                            height: 25px;
+                            }
                         &:hover i{
                             color: rgb(122, 104, 237);
                         }
@@ -129,6 +133,9 @@ footer{
                             text-align: center;
                             cursor: pointer; 
                             transition: ease .5s;
+                            @media screen and (max-width:351px) {
+                                font-size: .8em;
+                                }
                         }
                        }
                     }  

@@ -139,7 +139,7 @@ header .header-title .part-icone .icone {
   height: 45px;
   border-radius: 150px;
   margin: 20px auto;
-  border: solid 1px white;
+  border: solid 2px white;
   position: relative;
   cursor: pointer;
 }
@@ -151,6 +151,8 @@ header .header-title .part-icone .icone i {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 1.5em;
 }
 header nav {
   height: 80px;
@@ -452,7 +454,7 @@ footer form .form-right input[type=button] {
   font-weight: 580;
   letter-spacing: 2px;
 }
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 857px) {
   footer form .form-right input[type=button] {
     font-size: 0.5em;
     letter-spacing: normal;
@@ -534,6 +536,12 @@ footer .form-left .rows .column .column-right .reseau-last span {
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
+@media screen and (max-width: 351px) {
+  footer .form-left .rows .column .column-right .reseau-last span {
+    width: 25px;
+    height: 25px;
+  }
+}
 footer .form-left .rows .column .column-right .reseau-last span:hover i {
   color: rgb(122, 104, 237);
 }
@@ -546,4 +554,9 @@ footer .form-left .rows .column .column-right .reseau-last span i {
   cursor: pointer;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
+}
+@media screen and (max-width: 351px) {
+  footer .form-left .rows .column .column-right .reseau-last span i {
+    font-size: 0.8em;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -10,10 +10,10 @@ header {
     animation-delay: 0.15s;
     opacity: 0;
     @keyframes Animheader {
-        to{
-          transform: translateY(0);
-          opacity: 1;
-        }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
     h1 {
       font-family: $font1;
@@ -30,16 +30,15 @@ header {
         font-style: italic;
         color: rgb(241, 240, 240);
         margin: 5px auto;
-        @media screen and (max-width:769px) {
-            width: 50%;
-            font-size:.9em;
+        @media screen and (max-width: 769px) {
+          width: 50%;
+          font-size: 0.9em;
         }
-        @media screen and (max-width:533px) {
-            font-size: .8em;   
+        @media screen and (max-width: 533px) {
+          font-size: 0.8em;
         }
-        @media screen and (max-width:330px) {
-            font-size: .7em;
-            
+        @media screen and (max-width: 330px) {
+          font-size: 0.7em;
         }
       }
       .icone {

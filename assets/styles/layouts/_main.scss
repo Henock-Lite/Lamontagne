@@ -37,9 +37,9 @@ main {
 
         &::after {
           transform: translate(-50%, -50%) translateX(85%);
-          @media screen and (max-width:555px) {
-            transform: translate(-50%,-50%) translateX(150%);
-            }
+          @media screen and (max-width: 555px) {
+            transform: translate(-50%, -50%) translateX(150%);
+          }
         }
       }
     }
@@ -75,12 +75,16 @@ main {
     }
   }
   .seconde-sect {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     border-top: 1px solid #cac8c8;
     width: 100%;
     height: 100%;
     @media screen and (max-width: 729px) {
-      display: block;
+      grid-template-columns: 1fr;
+    }
+    p{
+      line-height: 30px;
     }
     img {
       width: 80%;
@@ -105,7 +109,7 @@ main {
         width: 80%;
         margin: 0 auto;
         text-align: left;
-        line-height: 26px;
+       
       }
       .Magna-button {
         margin: 25px 0;

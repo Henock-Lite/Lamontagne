@@ -343,17 +343,19 @@ main .first-sect .massive-picture .massive-button {
   padding: 60px;
 }
 main .seconde-sect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid #cac8c8;
   width: 100%;
   height: 100%;
 }
 @media screen and (max-width: 729px) {
   main .seconde-sect {
-    display: block;
+    grid-template-columns: 1fr;
   }
+}
+main .seconde-sect p {
+  line-height: 30px;
 }
 main .seconde-sect img {
   width: 80%;
@@ -382,7 +384,6 @@ main .seconde-sect .right-part .Magna-p {
   width: 80%;
   margin: 0 auto;
   text-align: left;
-  line-height: 26px;
 }
 main .seconde-sect .left-part .Magna-button,
 main .seconde-sect .right-part .Magna-button {
